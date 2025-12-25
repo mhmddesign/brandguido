@@ -70,6 +70,13 @@ const FloatingDesigner = () => {
                 <div className="absolute inset-0 copper-gradient opacity-20" />
                 <h3 className="font-medium text-lg relative z-10">Mohammed El Maachi</h3>
                 <p className="text-sm opacity-60 relative z-10">Brand & Visual Designer</p>
+                <a 
+                  href={LINKS.portfolio}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent-purple hover:text-white transition-colors relative z-10"
+                >
+                  mhmd.design <ExternalLink size={10} />
                 </a>
               </div>
 

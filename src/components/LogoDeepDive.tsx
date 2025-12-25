@@ -28,6 +28,7 @@ const stages = [
     content: "Our primary signature combines the 'Vitalora' editorial wordmark. This vertical alignment mimics the structure of a tree or a rising sun, creating a sense of stability and growth.",
     visual: "wordmark"
   },
+  {
     id: 3,
     title: "The Symbol",
     subtitle: "The 'O' Mark",
