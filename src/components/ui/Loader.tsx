@@ -63,8 +63,8 @@ const Loader = () => {
                 className="w-full h-full" 
                 style={{ overflow: 'visible' }}
               >
-                 {/* Corrected Transform for perfect centering based on path coordinates */}
-                 <g transform="translate(-232, -55) scale(1)">
+                 {/* Corrected Transform for perfect centering based on calculated bbox center (262.25, 68.43) -> translate(50-262.25, 50-68.43) */}
+                 <g transform="translate(-212.25, -18.43) scale(1)">
                     <path d={oPath} fill="currentColor" />
                     
                     {/* Rotating Star */}

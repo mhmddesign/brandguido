@@ -58,12 +58,18 @@ const MoodGrid = () => {
             className="absolute inset-0 shadow-none group-hover:shadow-[0_0_80px_rgba(94,67,155,0.4)] transition-shadow duration-500 rounded-2xl z-0"
           />
 
-          <LightboxImage
-            src={IMAGES.moodboard}
-            alt="Vitalora Mood Board"
-            layoutId="moodboard-main"
-            className="w-full h-auto rounded-2xl"
-          />
+          {/* Floating Liveliness Animation */}
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <LightboxImage
+              src={IMAGES.moodboard}
+              alt="Vitalora Mood Board"
+              layoutId="moodboard-main"
+              className="w-full h-auto rounded-2xl"
+            />
+          </motion.div>
         </motion.div>
 
         {/* Click instruction */}

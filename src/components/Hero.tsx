@@ -64,13 +64,34 @@ const Hero = () => {
       </motion.div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6">
+      <motion.div 
+        className="relative z-10 flex flex-col items-center text-center px-6"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.3,
+              delayChildren: 2.8
+            }
+          }
+        }}
+      >
         <motion.div
-          initial={{ scale: 1.5, opacity: 0, y: 50, filter: "blur(20px)" }}
-          animate={{ scale: 1, opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1.5, delay: 2.5, ease: [0.16, 1, 0.3, 1] }} // Starts as loader finishes
+          variants={{
+            hidden: { scale: 1.5, opacity: 0, y: 50, filter: "blur(20px)" },
+            visible: { 
+              scale: 1, 
+              opacity: 1, 
+              y: 0, 
+              filter: "blur(0px)",
+              transition: { duration: 1.5, ease: [0.16, 1, 0.3, 1] } 
+            }
+          }}
           style={{ 
-            scale: logoScale, // Combined with scroll scale
+            scale: logoScale,
             opacity: logoOpacity,
             filter: logoFilter 
           }}
@@ -83,9 +104,14 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 3.2 }} // Delayed after logo
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: { 
+              opacity: 1, 
+              y: 0,
+              transition: { duration: 1 } 
+            }
+          }}
           style={{ 
             y: textY,
             opacity: textOpacity
