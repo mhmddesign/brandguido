@@ -2,8 +2,17 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Mail, Instagram, Dribbble, Linkedin } from 'lucide-react';
+import { ArrowUpRight, Mail, Instagram, Dribbble, Linkedin, Youtube } from 'lucide-react';
 import MagneticButton from './ui/MagneticButton';
+
+const LINKS = {
+  email: "mailto:me@mohelmaachi.com",
+  instagram: "https://instagram.com/mohelmaachi",
+  dribbble: "https://dribbble.com/mohelmaachi",
+  linkedin: "https://linkedin.com/in/mohelmaachi",
+  behance: "https://behance.net/mohelmaachi",
+  youtube: "https://youtube.com/@mohelmaachi",
+};
 
 const DesignerFooter = () => {
   const currentYear = new Date().getFullYear();
@@ -24,7 +33,7 @@ const DesignerFooter = () => {
           </h2>
           
           <motion.a
-            href="mailto:hello@mhmd.design"
+            href={LINKS.email}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-3 px-8 py-4 bg-accent-purple text-cream rounded-full text-lg font-medium mt-8 group"
@@ -48,17 +57,32 @@ const DesignerFooter = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-wrap justify-center">
             {[
-              { icon: <Instagram size={20} />, label: "Instagram", href: "#" },
-              { icon: <Dribbble size={20} />, label: "Dribbble", href: "#" },
-              { icon: <Linkedin size={20} />, label: "LinkedIn", href: "#" },
+              { icon: <Linkedin size={20} />, label: "LinkedIn", href: LINKS.linkedin },
+              { icon: <Instagram size={20} />, label: "Instagram", href: LINKS.instagram },
+              { icon: <Dribbble size={20} />, label: "Dribbble", href: LINKS.dribbble },
+              { icon: <Youtube size={20} />, label: "YouTube", href: LINKS.youtube },
+              { 
+                icon: (
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22 7h-7V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-9 0H5V5h8v2zm-4 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                  </svg>
+                ), 
+                label: "Behance", 
+                href: LINKS.behance 
+              },
             ].map((social, i) => (
               <MagneticButton 
                 key={i}
                 className="w-12 h-12 rounded-full border border-cream/20 hover:border-accent-purple hover:text-accent-purple transition-colors flex items-center justify-center"
               >
-                <a href={social.href} aria-label={social.label}>
+                <a 
+                  href={social.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                >
                   {social.icon}
                 </a>
               </MagneticButton>

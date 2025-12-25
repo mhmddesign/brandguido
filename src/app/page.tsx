@@ -11,6 +11,7 @@ import MockupGallery from "@/components/MockupGallery";
 import StationerySection from "@/components/StationerySection";
 import SocialTemplates from "@/components/SocialTemplates";
 import DesignerFooter from "@/components/DesignerFooter";
+import Conclusion from "@/components/Conclusion";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import CustomCursor from "@/components/ui/CustomCursor";
 
@@ -54,6 +55,9 @@ export default function Home() {
         
         {/* Social Templates */}
         <SocialTemplates />
+
+        {/* Final Conclusion */}
+        <Conclusion />
         
         {/* Designer Footer */}
         <DesignerFooter />

@@ -6,7 +6,7 @@ import Section from './ui/Section';
 import { LightboxImage } from './ui/Lightbox';
 
 // ===========================================
-// 📸 IMAGE CONFIGURATION - Edit these paths!
+// 📸 IMAGE CONFIGURATION
 // ===========================================
 const IMAGES = {
   mockup1: "https://i.ibb.co/zTs9nSQR/Amber-Jar-Mockup-4.png",
@@ -19,41 +19,35 @@ const IMAGES = {
 
 const mockups = [
   {
-    title: "Amber Jar - Front",
-    description: "Elegant amber glass with refined detailing",
-    image: IMAGES.mockup1,
-    span: "md:col-span-2 md:row-span-2"
-  },
-  {
-    title: "Amber Jar - Side",
-    description: "Side view with label detail",
-    image: IMAGES.mockup2,
-    span: "md:col-span-1"
-  },
-  {
-    title: "Product Display",
-    description: "Full product presentation",
-    image: IMAGES.mockup3,
-    span: "md:col-span-1"
-  },
-  {
-    title: "Lifestyle Shot",
-    description: "Product in context",
-    image: IMAGES.mockup4,
-    span: "md:col-span-1"
-  },
-  {
-    title: "Brand Application",
-    description: "Complete branding showcase",
-    image: IMAGES.mockup5,
-    span: "md:col-span-1"
-  },
-  {
-    title: "Product Line",
-    description: "Complete collection display",
+    title: "Primary Collection",
     image: IMAGES.mockup6,
-    span: "md:col-span-2"
-  }
+    span: "col-span-1 md:col-span-2 row-span-2",
+  },
+  {
+    title: "Detail View",
+    image: IMAGES.mockup2,
+    span: "col-span-1 md:col-span-1 row-span-1",
+  },
+  {
+    title: "Lifestyle",
+    image: IMAGES.mockup4,
+    span: "col-span-1 md:col-span-1 row-span-1",
+  },
+  {
+    title: "Packaging Series",
+    image: IMAGES.mockup1,
+    span: "col-span-1 md:col-span-1 row-span-2",
+  },
+  {
+    title: "Brand Elements",
+    image: IMAGES.mockup5,
+    span: "col-span-1 md:col-span-2 row-span-1",
+  },
+  {
+    title: "Product Focus",
+    image: IMAGES.mockup3,
+    span: "col-span-1 md:col-span-1 row-span-1",
+  },
 ];
 
 const MockupGallery = () => {
@@ -75,8 +69,8 @@ const MockupGallery = () => {
           </h2>
         </motion.div>
 
-        {/* Mockup Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        {/* Mockup Grid - Reorganized Bento */}
+        <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-4 md:gap-6">
           {mockups.map((mockup, i) => (
             <motion.div
               key={i}
@@ -84,22 +78,21 @@ const MockupGallery = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: i * 0.1 }}
-              className={`group relative overflow-hidden rounded-lg ${mockup.span}`}
+              className={`group relative overflow-hidden rounded-xl ${mockup.span}`}
               data-cursor="View"
             >
-              <div className="aspect-square md:aspect-auto md:h-full w-full overflow-hidden">
+              <div className="w-full h-full">
                 <LightboxImage
                   src={mockup.image}
                   alt={mockup.title}
                   layoutId={`mockup-${i}`}
-                  className="w-full h-full"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-purple/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 md:p-8 pointer-events-none">
-                <h3 className="text-cream text-xl font-medium mb-1">{mockup.title}</h3>
-                <p className="text-cream/60 text-sm">{mockup.description}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-purple/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 pointer-events-none">
+                <h3 className="text-cream text-lg font-medium">{mockup.title}</h3>
               </div>
             </motion.div>
           ))}
@@ -113,7 +106,7 @@ const MockupGallery = () => {
           transition={{ delay: 0.5 }}
           className="text-center text-deep-purple/30 text-sm mt-8 uppercase tracking-widest"
         >
-          Click any image to expand
+          Click images to expand
         </motion.p>
       </div>
     </Section>
