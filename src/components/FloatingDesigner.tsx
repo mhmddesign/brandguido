@@ -70,14 +70,43 @@ const FloatingDesigner = () => {
                 <div className="absolute inset-0 copper-gradient opacity-20" />
                 <h3 className="font-medium text-lg relative z-10">Mohammed El Maachi</h3>
                 <p className="text-sm opacity-60 relative z-10">Brand & Visual Designer</p>
-                <a 
-                  href={LINKS.portfolio}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-widest text-accent-purple hover:text-white transition-colors relative z-10"
-                >
-                  mhmd.design <ExternalLink size={10} />
                 </a>
+              </div>
+
+              {/* Client Resources - Download Section */}
+              <div className="p-4 bg-gray-50 border-b border-gray-100">
+                <p className="text-[10px] uppercase tracking-wider opacity-50 mb-3 font-semibold">Client Resources</p>
+                <div className="flex flex-col gap-2">
+                  <a 
+                    href="#" 
+                    className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-xl hover:border-accent-purple/30 hover:shadow-md transition-all group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-deep-purple/5 text-accent-purple flex items-center justify-center">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                          <polyline points="7 10 12 15 17 10"/>
+                          <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                      </div>
+                      <span className="text-sm font-medium text-gray-700">Logo Kit (SVG)</span>
+                    </div>
+                    <ExternalLink size={12} className="opacity-30 group-hover:opacity-100 transition-opacity" />
+                  </a>
+
+                  <a 
+                    href="#" 
+                    className="flex items-center justify-between p-3 bg-white border border-gray-200 rounded-xl hover:border-accent-purple/30 hover:shadow-md transition-all group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-full bg-deep-purple/5 text-accent-purple flex items-center justify-center">
+                        <span className="text-[10px] font-bold">Ai</span>
+                      </div>
+                      <span className="text-sm font-medium text-gray-700">Project File (.AI)</span>
+                    </div>
+                    <ExternalLink size={12} className="opacity-30 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                </div>
               </div>
 
               {/* Contact Actions */}

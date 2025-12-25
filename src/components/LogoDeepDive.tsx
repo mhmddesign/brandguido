@@ -28,11 +28,10 @@ const stages = [
     content: "Our primary signature combines the 'Vitalora' editorial wordmark. This vertical alignment mimics the structure of a tree or a rising sun, creating a sense of stability and growth.",
     visual: "wordmark"
   },
-  {
     id: 3,
     title: "The Symbol",
     subtitle: "The 'O' Mark",
-    content: "A fine-line duality. The base of the icon represents a medicinal leaf (Nature/Science), which fans out at the top into a stylized sunburst or aura (Energy/Spirit). It visually narrates our promise: Natural ingredients fueling inner radiance.",
+    content: "A symbol of radiant wholeness. The icon frames a four-pointed star—the universal spark of Vitality—within a perfect circle. The 'O' represents the Aura, the Sun, and the cyclical nature of Wellness. It is not just a letter; it is a portal to inner balance, symbolizing the light that radiates from within when health is honored as a ritual.",
     visual: "symbol"
   },
   {
