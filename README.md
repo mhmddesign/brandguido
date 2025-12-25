@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="https://i.ibb.co/6RTNMDqM/Gemini-Generated-Image-8eg6b58eg6b58eg6.png" alt="BrandGuido Logo" width="120" />
   <h1>BrandGuido Platform</h1>
   <p>
     <strong>The Universal Brand Guidelines Template.</strong><br/>
