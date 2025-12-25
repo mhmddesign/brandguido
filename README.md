@@ -1,90 +1,103 @@
 <div align="center">
-  <img src="https://i.ibb.co/6RTNMDqM/Gemini-Generated-Image-8eg6b58eg6b58eg6.png" alt="Vitalora Logo" width="120" />
-  <h1>Vitalora Brand Experience</h1>
+  <img src="https://i.ibb.co/6RTNMDqM/Gemini-Generated-Image-8eg6b58eg6b58eg6.png" alt="BrandGuido Logo" width="120" />
+  <h1>BrandGuido Platform</h1>
   <p>
-    <strong>Vitality is a Ritual.</strong><br/>
-    A luxury wellness brand identity crafted with scientific precision and organic sensibility.
+    <strong>The Universal Brand Guidelines Template.</strong><br/>
+    An open-source, interactive platform for designers to showcase brand identity systems with immersive storytelling.
   </p>
   
   [![Vercel App](https://therealsujitk-vercel-badge.vercel.app/?app=brandguido)](https://vitalora.mhmd.design/)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 </div>
 
 <br />
 
-![Hero Section](/Users/mohel/.gemini/antigravity/brain/8f188b56-a5b5-496c-9600-3249fc928d12/hero_1766697336150.png)
+![Platform Hero Preview](/Users/mohel/.gemini/antigravity/brain/8f188b56-a5b5-496c-9600-3249fc928d12/hero_platform_1766698122047.png)
 
-## 📖 About the Project
+## 🚀 Overview
 
-**Vitalora** is more than a supplement brand; it is a philosophy. Bridging the gap between European pharmaceutical standards and the ancient wisdom of botany, Vitalora transforms the routine of taking vitamins into a moment of luxury.
+**BrandGuido** is a Next.js 14 template designed to transform static brand PDFs into living, breathing digital experiences. Built with **Framer Motion** and **Tailwind CSS**, it offers a premium, magazine-like interface for presenting logos, typography, color palettes, and brand philosophy.
 
-This interactive brand guideline serves as a digital manifesto, demonstrating how the brand lives, breathes, and moves in a digital environment.
+Stop sending PDFs. Send an experience.
 
-### 🌟 Key Features
+## ✨ Key Features
 
-- **Immersive Storytelling:** A narrative-driven scroll experience that reveals the brand's core philosophy.
-- **Interactive Logo System:** A "Deep Dive" into the logo's anatomy, symbolism, and variations with SVG animations.
-- **Dynamic Visuals:** Parallax scrolling, grain texturing, and "living" layouts that feel organic and premium.
-- **Client Resources:** A hidden "Floating Designer" widget that allows clients to download asset kits directly.
+- **Interactive Logo Analysis**: A dedicated "Deep Dive" section that deconstructs logo anatomy with SVG consistency and animation.
+- ** immersive Storytelling**: Parallax scroll effects and staggered text reveals that guide the user through the brand narrative.
+- **Dynamic Asset Library**: "The Mood Board" serves as a lightbox gallery for brand imagery.
+- **Floating Designer Widget**: A subtle, insistent tool for clients to download assets (SVG, AI, PDF) and contact the designer.
+- **Responsive & Accessible**: Fully optimized for all devices, ensuring your brand looks perfect on mobile and desktop.
 
----
-
-## 🎨 Visual Identity
-
-### The Symbol
-
-The icon is not a leaf, but a stylized 'O' representing the **Aura**, the **Sun**, and the **Cyclical Nature of Wellness**. At its heart lies a four-pointed star—the universal spark of **Vitality**.
-
-![Logo Deep Dive](/Users/mohel/.gemini/antigravity/brain/8f188b56-a5b5-496c-9600-3249fc928d12/logo_1766697755649.png)
-
-### The Mood
-
-A curated collection of textures, organic forms, and high-fashion photography that defines the Vitalora universe.
-
-![Mood Board](/Users/mohel/.gemini/antigravity/brain/8f188b56-a5b5-496c-9600-3249fc928d12/moodboard_1766697541036.png)
-
-### The Voice
-
-Typography that speaks with authority and elegance. **High-Contrast Modern Serif** for headlines, paired with clean, functional sans-serifs for data.
-
-![Typography](/Users/mohel/.gemini/antigravity/brain/8f188b56-a5b5-496c-9600-3249fc928d12/typography_1766697843125.png)
-
-### The Palette
-
-Colors derived from nature's most potent elements: **Deep Purple** (Wisdom/Night), **Cream** (Purity/Day), and **Copper** (Energy/Earth).
-
-![Color Palette](/Users/mohel/.gemini/antigravity/brain/8f188b56-a5b5-496c-9600-3249fc928d12/colors_1766697810964.png)
-
----
+![Logo Analysis Preview](/Users/mohel/.gemini/antigravity/brain/8f188b56-a5b5-496c-9600-3249fc928d12/narrative_platform_1766698171595.png)
 
 ## 🛠 Tech Stack
 
-- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Animation:** [Framer Motion](https://www.framer.com/motion/)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Deployment:** [Vercel](https://vercel.com/)
+- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animation**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Fonts**: [Geist](https://vercel.com/font) (Default) / Configurable
 
-## 🚀 Getting Started
+## 📦 Installation
 
-First, run the development server:
+Clone the repository and install dependencies to start customizing your own brand guidelines.
+
+```bash
+git clone https://github.com/mhmddesign/brandguido.git
+cd brandguido
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the template in action.
 
-## 👨‍💻 Author
+## 🎨 Customization Guide
+
+### 1. Logo & Branding
+
+Replace the SVG files in `src/components/ui/` with your own brand assets. Update the `InteractiveLogo.tsx` component to animate your specific paths.
+
+### 2. Colors & Typography
+
+Customize the `tailwind.config.ts` file to match your brand's color palette and font stack.
+
+```typescript
+// tailwind.config.ts
+colors: {
+  'brand-primary': '#YourColor',
+  'brand-accent': '#YourAccent',
+}
+```
+
+![Color Palette Preview](/Users/mohel/.gemini/antigravity/brain/8f188b56-a5b5-496c-9600-3249fc928d12/colors_platform_1766698495303.png)
+
+### 3. Content
+
+Update the text and narrative in `src/components/` files. The content is structured comfortably within React components for easy editing.
+
+### 4. Gallery
+
+Add your brand imagery to `public/images/` and update the `IMAGES` constant in `MoodGrid.tsx`.
+
+![Gallery Preview](/Users/mohel/.gemini/antigravity/brain/8f188b56-a5b5-496c-9600-3249fc928d12/gallery_platform_1766698303212.png)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Created By
 
 **Mohammed El Maachi**  
 _Brand & Digital Designer_
 
 - [Portfolio](https://mhmd.design)
-- [LinkedIn](https://linkedin.com/in/mohelmaachi)
-- [YouTube](https://youtube.com/@mohelmaachi)
+- [Twitter](https://twitter.com/mhmd_design)
