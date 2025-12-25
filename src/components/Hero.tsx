@@ -141,7 +141,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-accent-purple transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
           </motion.a>
         </motion.div>
-      </div>
+      </motion.div>
 
       {/* Scroll Indicator */}
       <motion.div
